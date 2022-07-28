@@ -9,4 +9,4 @@ def task_view(request):
         'modelobj' : modelobj
 
     }
-    return render(request,"home.html", modelobj)
+    return render(request,"home.html", context)
