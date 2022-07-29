@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from .models import TaskModel
 
@@ -10,3 +11,11 @@ def task_view(request):
 
     }
     return render(request,"home.html", context)
+
+
+def task_edit(request,pk):
+    editobj = TaskModel.objects.get(pk=pk)
+    context = {
+        'editobj':editobj
+    }
+    return render(request,"edit.html",context)

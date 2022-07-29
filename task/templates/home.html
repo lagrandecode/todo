@@ -1,5 +1,9 @@
 {% for x in modelobj %}
 
-<h1>{{x.title}}</h1>
+<ul>
+    <li>
+        <a href="/add/{{x.id}}">{{x.title}}</a>
+    </li>
+</ul>
 
 {% endfor %}
