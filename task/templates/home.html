@@ -13,9 +13,17 @@
     
 
 
+
+{% csrf_token %}
+
+<div class="center-column">
+  <form method="POST" action="/">
+    {{form}}
+    <input type="submit" name="create task">
+  </form>
+</div>
+
 {% for x in modelobj %}
-
-
 <div class="card" style="width: 18rem;">
     <div class="container">
         <div class="card-body">
