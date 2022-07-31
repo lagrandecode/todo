@@ -14,10 +14,11 @@
 
 
 
-{% csrf_token %}
+
 
 <div class="center-column">
   <form method="POST" action="/">
+    {% csrf_token %}
     {{form}}
     <input type="submit" name="create task">
   </form>
@@ -29,8 +30,8 @@
         <div class="card-body">
             <h5 class="card-title">{{x.title}}</h5>
             <p class="card-text">{{x.desc}}</p>
-            <button class="btn"><a href="#" class="btn btn-primary">Update</a></button>
-            <button class="btn2"><a href="#" class="btn btn-primary">Delete</a></button>
+            <button class="btn"><a href="edit/{{x.id}}" class="btn btn-primary">Update</a></button>
+            <button class="btn2"><a href="delete/{{x.id}}" class="btn btn-primary">Delete</a></button>
           </div>
     </div>
   </div>

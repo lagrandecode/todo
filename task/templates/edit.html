@@ -1,1 +1,8 @@
-{{editobj.title}}
+<div class="center-column">
+    <form method="POST">
+      {% csrf_token %}
+      {{updateform}}
+      <input type="submit" name="create task">
+    </form>
+  </div>
+  
